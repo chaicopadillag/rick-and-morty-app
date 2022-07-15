@@ -1,25 +1,13 @@
 import { Card, Grid, Text } from "@nextui-org/react";
 import { MainLayout } from "../components";
+import { CustomCard } from "../components/ui";
 
 export const PageNotFound = () => {
   return (
-    <MainLayout title="Listado de Personales">
-      <Grid.Container gap={2} css={{ marginTop: "$10" }} justify="center">
+    <MainLayout title="Listado de Personales">      
         <Card variant="bordered" css={{ mw: "max-content" }}>
-          <Card.Body>
-            <Text
-              h1
-              size={60}
-              css={{
-                textGradient: "45deg, $red500 -20%, $red600 100%",
-              }}
-              weight="bold"
-            >
-              Página no encontrada
-            </Text>
-          </Card.Body>
+          <CustomCard text="Página no encontrada" />
         </Card>
-      </Grid.Container>
     </MainLayout>
   );
 };
