@@ -37,17 +37,11 @@ export const characterSlice = createSlice({
     setTotal: (state, action: PayloadAction<number>) => {
       state.total = action.payload;
     },
-    resetState: () => {
-      return {
-        ...initialState,
-      };
-    },
   },
 });
 
 export const {
   clearCharacter,
-  resetState,
   setCharacter,
   setCharacters,
   setFavorites,

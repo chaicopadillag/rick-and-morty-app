@@ -49,7 +49,10 @@ export const CharacterDetail: FC<CharacterDetailProp> = ({ character }) => {
           <Card.Body>
             <Card.Image
               objectFit="fill"
-              src={image || "/no-image.png"}
+              src={
+                image ||
+                "https://uning.es/wp-content/uploads/2016/08/ef3-placeholder-image.jpg"
+              }
               width="100%"
               height={500}
               alt={name}

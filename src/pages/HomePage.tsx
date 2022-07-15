@@ -12,6 +12,8 @@ export const HomePage = () => {
 
   useEffect(() => {
     dispatch(getCharactersPaginate());
+
+    
   }, []);
   return (
     <MainLayout title="Listado de Personales">
