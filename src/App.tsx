@@ -1,8 +1,15 @@
 import { useEffect } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+
 import { useAppDispatch } from "./hooks";
-import { CharacterPage, FavoritesPage, HomePage, PageNotFound } from "./pages";
 import { getCharactersFavorites } from "./thunks";
+import {
+  CharacterPage,
+  FavoritesPage,
+  HomePage,
+  OderNamesPage,
+  PageNotFound,
+} from "./pages";
 
 const App = () => {
   const dispatch = useAppDispatch();
@@ -17,6 +24,7 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/character/:characterId" element={<CharacterPage />} />
         <Route path="/favorites" element={<FavoritesPage />} />
+        <Route path="/order-names" element={<OderNamesPage />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </>

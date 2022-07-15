@@ -1,4 +1,4 @@
-import { Button, Image, Spacer, Text, useTheme } from "@nextui-org/react";
+import { Image, Spacer, Text, useTheme } from "@nextui-org/react";
 import { Link } from "react-router-dom";
 
 export const Navbar = () => {
@@ -40,6 +40,10 @@ export const Navbar = () => {
       />
       <Link to="/favorites">
         <Text color="white">Favoritos</Text>
+      </Link>
+      <Spacer y={1} />
+      <Link to="/order-names">
+        <Text color="white">Nombre Ordenados</Text>
       </Link>
     </div>
   );

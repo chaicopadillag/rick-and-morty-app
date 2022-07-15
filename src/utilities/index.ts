@@ -1,13 +1,18 @@
+/**
+ *
+ * @param numbers {number[]}
+ * @returns
+ */
 export const sum = (numbers: number[]) => {
   const sumNumbers = (callback: (resul: number) => void): void => {
-    const result = numbers.reduce((accumulator, value) => {
-      if (value > 20) {
-        const evenNumber = value % 2 === 0;
+    const result = numbers.reduce((accumulator, number) => {
+      if (number > 20) {
+        const evenNumber = number % 2 === 0;
 
-        return evenNumber ? 20 + accumulator : value + accumulator;
+        return evenNumber ? 20 + accumulator : number + accumulator;
       }
 
-      return value + accumulator;
+      return number + accumulator;
     }, 0);
 
     return callback(result);
@@ -16,4 +21,5 @@ export const sum = (numbers: number[]) => {
   return sumNumbers;
 };
 
-sum([1, 2, 3])((result) => console.log(result));
+// resul: 43
+// sum([1, 2, 20, 26])((result) => console.log(result));
