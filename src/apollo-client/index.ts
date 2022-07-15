@@ -1,9 +1,9 @@
-import { ApolloClient, HttpLink, InMemoryCache } from '@apollo/client';
-
+import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client";
+import { getEnvironments } from "../env";
+console.log(getEnvironments().VITE_BASE_URL);
 export const apolloClient = new ApolloClient({
   link: new HttpLink({
-    // uri: import.meta.env.APOLLO_URL || 'http://localhost:4000/graphql',
-    uri: 'https://rickandmortyapi.com/graphql',
+    uri: process.env.VITE_BASE_URL || "http://localhost:4000/graphql",
   }),
   cache: new InMemoryCache(),
 });

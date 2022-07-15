@@ -23,8 +23,22 @@ git clone url
 yarn  Ó npm i
 ```
 
+- Crear el archivo de variables de entorno `.env.local` :
+
+```
+cp .env.example .env
+```
+
 - Correr la Aplicación:
 
 ```
 yarn dev Ó npm run dev
+```
+
+## Correr Tests
+
+- Correr los test:
+
+```
+yarn test
 ```
