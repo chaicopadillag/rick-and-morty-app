@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const CHARACTERS_QUERY = gql`
   query {
@@ -24,8 +24,13 @@ export const CHARACTER_QUERY = gql`
     character(id: $id) {
       id
       name
-      species
       image
+      status
+      species
+      gender
+      location {
+        name
+      }
     }
   }
 `;

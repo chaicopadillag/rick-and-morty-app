@@ -1,23 +1,19 @@
 export type CharacterStateType = {
-  characters: Result[];
-  favorites: Result[];
+  characters: CharacterType[];
+  character: CharacterType | null;
+  favorites: CharacterType[];
   isLoading: boolean;
   page: number;
-  perPage: number;
   total: number;
 };
 
-// Todo: Api Response Characters
-export type CharacterResponseType = {
-  data: Data;
+// Todo: Response Characters
+export type CharactersResponseType = {
+  characters: CharactersType;
 };
 
-type Data = {
-  characters: Characters;
-};
-
-export type Characters = {
-  results: Result[];
+export type CharactersType = {
+  results: CharacterType[];
   info: Info;
 };
 
@@ -28,9 +24,22 @@ type Info = {
   prev: number;
 };
 
-export type Result = {
-  name: string;
-  image: string;
+// Todo: Character Response
+
+export type CharacterResponseType = {
+  character: CharacterType;
+};
+
+export type CharacterType = {
   id: string;
+  name: string;
+  status: string;
   species: string;
+  gender: string;
+  location: Location;
+  image: string;
+};
+
+type Location = {
+  name: string;
 };
