@@ -1,16 +1,8 @@
-import { FC, useEffect, useState } from "react";
-import {
-  Button,
-  Card,
-  Col,
-  Container,
-  Grid,
-  Row,
-  Text,
-} from "@nextui-org/react";
-import { CharacterType } from "../../types";
-import { useAppDispatch, useAppSelector } from "../../hooks";
-import { setFavorites } from "../../slices";
+import { FC, useEffect, useState } from 'react';
+import { Button, Card, Col, Container, Grid, Row, Text } from '@nextui-org/react';
+import { CharacterType } from '../../types';
+import { useAppDispatch, useAppSelector } from '../../hooks';
+import { setFavorites } from '../../slices';
 
 type CharacterDetailProp = { character: CharacterType };
 
@@ -30,7 +22,7 @@ export const CharacterDetail: FC<CharacterDetailProp> = ({ character }) => {
       myFavorites.push(character);
     }
 
-    localStorage.setItem("favorites", JSON.stringify(myFavorites));
+    localStorage.setItem('favorites', JSON.stringify(myFavorites));
     dispatch(setFavorites(myFavorites));
     setIsInFavorite(!isInFavorite);
   };
@@ -45,88 +37,73 @@ export const CharacterDetail: FC<CharacterDetailProp> = ({ character }) => {
   return (
     <>
       <Grid xs={12} sm={4}>
-        <Card isHoverable variant="bordered" css={{ padding: "10px" }}>
+        <Card isHoverable variant='bordered' css={{ padding: '10px' }}>
           <Card.Body>
-            <Card.Image
-              objectFit="fill"
-              src={
-                image ||
-                "https://uning.es/wp-content/uploads/2016/08/ef3-placeholder-image.jpg"
-              }
-              width="100%"
-              height={500}
-              alt={name}
-            />
+            <Card.Image objectFit='fill' src={image || 'https://uning.es/wp-content/uploads/2016/08/ef3-placeholder-image.jpg'} width='100%' height={500} alt={name} />
           </Card.Body>
         </Card>
       </Grid>
       <Grid xs={12} sm={8}>
-        <Card isHoverable variant="bordered" css={{ padding: "30px" }}>
-          <Card.Header
-            css={{ display: "flex", justifyContent: "space-between" }}
-          >
-            <Text b size={40} transform="capitalize">
+        <Card isHoverable variant='bordered' css={{ padding: '30px' }}>
+          <Card.Header css={{ display: 'flex', justifyContent: 'space-between' }}>
+            <Text b size={40} transform='capitalize'>
               {name}
             </Text>
-            <Button
-              color="gradient"
-              ghost={!isInFavorite}
-              onPress={handleToggleFavorite}
-            >
-              {isInFavorite ? "Quitar de favoritos" : "Agregar a favoritos"}
+            <Button color='gradient' ghost={!isInFavorite} onPress={handleToggleFavorite}>
+              {isInFavorite ? 'Quitar de favoritos' : 'Agregar a favoritos'}
             </Button>
           </Card.Header>
           <Card.Body>
             <Text size={30}>Información</Text>
             <Container gap={0}>
               <Row gap={1}>
-                <Col css={{ width: "30%" }}>
-                  <Text b transform="uppercase">
+                <Col css={{ width: '30%' }}>
+                  <Text b transform='uppercase'>
                     ID:
                   </Text>
                 </Col>
-                <Col css={{ textAlign: "left" }}>
-                  <Text transform="capitalize">{id}</Text>
+                <Col css={{ textAlign: 'left' }}>
+                  <Text transform='capitalize'>{id}</Text>
                 </Col>
               </Row>
               <Row gap={1}>
-                <Col css={{ width: "30%" }}>
-                  <Text b transform="uppercase">
+                <Col css={{ width: '30%' }}>
+                  <Text b transform='uppercase'>
                     Genero:
                   </Text>
                 </Col>
-                <Col css={{ textAlign: "left" }}>
-                  <Text transform="capitalize">{gender}</Text>
+                <Col css={{ textAlign: 'left' }}>
+                  <Text transform='capitalize'>{gender}</Text>
                 </Col>
               </Row>
               <Row gap={1}>
-                <Col css={{ width: "30%" }}>
-                  <Text b transform="uppercase">
+                <Col css={{ width: '30%' }}>
+                  <Text b transform='uppercase'>
                     Especie:
                   </Text>
                 </Col>
-                <Col css={{ textAlign: "left" }}>
-                  <Text transform="capitalize">{species}</Text>
+                <Col css={{ textAlign: 'left' }}>
+                  <Text transform='capitalize'>{species}</Text>
                 </Col>
               </Row>
               <Row gap={1}>
-                <Col css={{ width: "30%" }}>
-                  <Text b transform="uppercase">
+                <Col css={{ width: '30%' }}>
+                  <Text b transform='uppercase'>
                     Estado:
                   </Text>
                 </Col>
-                <Col css={{ textAlign: "left" }}>
-                  <Text transform="capitalize">{status}</Text>
+                <Col css={{ textAlign: 'left' }}>
+                  <Text transform='capitalize'>{status}</Text>
                 </Col>
               </Row>
               <Row gap={1}>
-                <Col css={{ width: "30%" }}>
-                  <Text b transform="uppercase">
+                <Col css={{ width: '30%' }}>
+                  <Text b transform='uppercase'>
                     Lugar:
                   </Text>
                 </Col>
-                <Col css={{ textAlign: "left" }}>
-                  <Text transform="capitalize">{location.name}</Text>
+                <Col css={{ textAlign: 'left' }}>
+                  <Text transform='capitalize'>{location.name}</Text>
                 </Col>
               </Row>
             </Container>

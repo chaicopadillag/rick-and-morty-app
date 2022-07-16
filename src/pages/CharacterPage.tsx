@@ -1,14 +1,14 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { Grid, Loading } from "@nextui-org/react";
-import { useQuery } from "@apollo/client";
+import { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { Grid, Loading } from '@nextui-org/react';
+import { useQuery } from '@apollo/client';
 
-import { CharacterDetail, MainLayout } from "../components";
-import { CHARACTER_QUERY } from "../graphql";
-import { useAppDispatch, useAppSelector } from "../hooks";
-import { clearCharacter, setCharacter } from "../slices";
-import { CharacterResponseType } from "../types";
-import { CustomCard } from "../components/ui";
+import { CharacterDetail, MainLayout } from '../components';
+import { CHARACTER_QUERY } from '../graphql';
+import { useAppDispatch, useAppSelector } from '../hooks';
+import { clearCharacter, setCharacter } from '../slices';
+import { CharacterResponseType } from '../types';
+import { CustomCard } from '../components/ui';
 
 export const CharacterPage = () => {
   const dispatch = useAppDispatch();
@@ -30,15 +30,7 @@ export const CharacterPage = () => {
 
   return (
     <MainLayout title={`Pesonaje {character.name}`}>
-      <>
-        {loading ? (
-          <Loading>Cargando...</Loading>
-        ) : character === null ? (
-          <CustomCard text="El personaje que busca no existe" />
-        ) : (
-          <CharacterDetail character={character} />
-        )}
-      </>
+      <>{loading ? <Loading>Cargando...</Loading> : character === null ? <CustomCard text='El personaje que busca no existe' /> : <CharacterDetail character={character} />}</>
     </MainLayout>
   );
 };

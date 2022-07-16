@@ -1,6 +1,6 @@
-import { createSlice } from "@reduxjs/toolkit";
-import type { PayloadAction } from "@reduxjs/toolkit";
-import type { CharacterStateType, CharacterType } from "../types";
+import { createSlice } from '@reduxjs/toolkit';
+import type { PayloadAction } from '@reduxjs/toolkit';
+import type { CharacterStateType, CharacterType } from '../types';
 
 const initialState: CharacterStateType = {
   characters: [],
@@ -12,7 +12,7 @@ const initialState: CharacterStateType = {
 };
 
 export const characterSlice = createSlice({
-  name: "character",
+  name: 'character',
   initialState,
   reducers: {
     startLoadingCharacters: (state) => {
@@ -40,12 +40,4 @@ export const characterSlice = createSlice({
   },
 });
 
-export const {
-  clearCharacter,
-  setCharacter,
-  setCharacters,
-  setFavorites,
-  setPage,
-  setTotal,
-  startLoadingCharacters,
-} = characterSlice.actions;
+export const { clearCharacter, setCharacter, setCharacters, setFavorites, setPage, setTotal, startLoadingCharacters } = characterSlice.actions;

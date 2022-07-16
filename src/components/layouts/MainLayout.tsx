@@ -7,8 +7,6 @@ type LayoutProps = {
   title?: string;
 };
 
-const origin = window.location.origin;
-
 export const MainLayout: FC<LayoutProps> = ({ children, title }) => {
   return (
     <>

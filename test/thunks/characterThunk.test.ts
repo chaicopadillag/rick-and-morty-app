@@ -1,14 +1,5 @@
-import {
-  setCharacters,
-  setFavorites,
-  setTotal,
-  startLoadingCharacters,
-} from "../../src/slices";
-import {
-  getCharactersFavorites,
-  getCharactersPaginate,
-} from "../../src/thunks";
-
+import { setCharacters, setFavorites, setTotal, startLoadingCharacters } from '../../src/slices';
+import { getCharactersFavorites, getCharactersPaginate } from '../../src/thunks';
 describe('Prueba de "characterThunk" ', () => {
   const dispatch = jest.fn();
 

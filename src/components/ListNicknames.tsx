@@ -1,8 +1,8 @@
-import { FC } from "react";
+import { FC } from 'react';
 
 type ListProp = {
   names: string[];
-  order: "ASC" | "DESC";
+  order: 'ASC' | 'DESC';
 };
 
 /**
@@ -11,11 +11,7 @@ type ListProp = {
  * @returns
  */
 export const ListNicknames: FC<ListProp> = ({ names, order }) => {
-  names.sort((a, b) =>
-    order === "ASC"
-      ? a.trim().localeCompare(b.trim(), "es", { sensitivity: "base" })
-      : b.trim().localeCompare(a.trim(), "es", { sensitivity: "base" })
-  );
+  names.sort((a, b) => (order === 'ASC' ? a.trim().localeCompare(b.trim(), 'es', { sensitivity: 'base' }) : b.trim().localeCompare(a.trim(), 'es', { sensitivity: 'base' })));
 
   return (
     <ul>

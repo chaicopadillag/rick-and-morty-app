@@ -1,2 +1,2 @@
-export * from "./Navbar";
-export * from "./CustomCard";
+export * from './Navbar';
+export * from './CustomCard';
