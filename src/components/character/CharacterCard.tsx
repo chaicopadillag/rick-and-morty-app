@@ -1,11 +1,9 @@
-import { FC } from "react";
-import { Card, Grid, Row, Text } from "@nextui-org/react";
-import { useNavigate } from "react-router-dom";
-import { CharacterType } from "../../types";
+import React, { FC } from 'react';
+import { Card, Grid, Row, Text } from '@nextui-org/react';
+import { useNavigate } from 'react-router-dom';
+import { CharacterType } from '../../types';
 
-export const CharacterCard: FC<{ character: CharacterType }> = ({
-  character: { name, id, image },
-}) => {
+export const CharacterCard: FC<{ character: CharacterType }> = ({ character: { name, id, image } }) => {
   const navigate = useNavigate();
 
   const handleViewDetail = () => {
@@ -14,24 +12,13 @@ export const CharacterCard: FC<{ character: CharacterType }> = ({
 
   return (
     <Grid xs={12} sm={6} md={3} xl={2}>
-      <Card
-        isHoverable
-        isPressable
-        variant="bordered"
-        onClick={handleViewDetail}
-      >
+      <Card isHoverable isPressable variant='bordered' onClick={handleViewDetail}>
         <Card.Body css={{ p: 1 }}>
-          <Card.Image
-            objectFit="fill"
-            src={image}
-            width="100%"
-            height={200}
-            alt={name}
-          />
+          <Card.Image objectFit='fill' src={image} width='100%' height={200} alt={name} />
         </Card.Body>
         <Card.Footer>
-          <Row wrap="wrap" justify="space-between">
-            <Text b transform="capitalize">
+          <Row wrap='wrap' justify='space-between'>
+            <Text b transform='capitalize'>
               {name}
             </Text>
           </Row>

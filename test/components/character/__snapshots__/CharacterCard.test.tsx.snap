@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Prueba Snapshot de Componente <CharacterCard/> debe de mostrar el componente 1`] = `
+<div>
+  <div
+    class="nextui-c-kRHeuF nextui-c-kRHeuF-iiUTsGP-css nextui-grid-item xs sm md xl"
+  >
+    <div
+      class="nextui-c-BDLTQ nextui-c-jMTBsW nextui-c-PJLV nextui-c-BDLTQ-kUADSW-variant-bordered nextui-c-BDLTQ-fmlsco-borderWeight-light nextui-c-BDLTQ-cuwTXc-disableAnimation-false nextui-c-BDLTQ-iZxJaC-isPressable-true nextui-c-PJLV-gulvcB-isFocusVisible-false"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="nextui-c-eFfoBo nextui-c-eFfoBo-ifRCjYa-css"
+      >
+        <div
+          class="nextui-c-iVzbCs nextui-c-iVzbCs-bDGmTT-ready-true nextui-c-iVzbCs-idqeSIq-css nextui-image-container nextui-image--loading"
+          data-state="loading"
+        >
+          <div
+            class="nextui-c-FIiRH nextui-c-FIiRH-ibDGmTT-css nextui-image-skeleton"
+          />
+          <img
+            alt="Rick Sanchez"
+            class="nextui-c-kbhVdb nextui-c-kbhVdb-iUwpmy-css nextui-image"
+            data-state="loading"
+            height="200"
+            src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+            width="100%"
+          />
+        </div>
+      </div>
+      <div
+        class="nextui-c-cakKrd"
+      >
+        <div
+          class="nextui-c-dfbgCO nextui-c-dfbgCO-fGHEql-fluid-true nextui-c-dfbgCO-idqFNMl-css"
+        >
+          <b
+            class="nextui-c-PJLV nextui-c-PJLV-iIzlms-css"
+          >
+            Rick Sanchez
+          </b>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
