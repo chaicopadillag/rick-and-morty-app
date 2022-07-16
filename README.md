@@ -6,8 +6,8 @@ App Demo aquí: [the Rick and Morty App](http://localhost:8080)
 
 ## Extra
 
-- Ejercicio #1, se encuentra en la siguiente ruta: `./src/utilities`.
-- Ejercicio #2, menu de navegación derecho: `Nombres Ordenados`
+- Ejercicio #1, se encuentra en la siguiente ruta: `./src/utilities` ó [aquí]() .
+- Ejercicio #2, se encuentra en la siguiente ruta: `./src/components/ListNicknames.tsx` ó en la app menu de navegación derecho: [Nombres Ordenados]() .
 
 ## Clonar y Probar
 
@@ -26,7 +26,7 @@ yarn  Ó npm i
 - Crear el archivo de variables de entorno `.env.local` :
 
 ```
-cp .env.example .env
+cp .env.example .env.local
 ```
 
 - Correr la Aplicación:

@@ -1,9 +1,14 @@
 // import '@testing-library/jest-dom';
 import 'whatwg-fetch';
 require('dotenv').config({
-    path:'.env'
+    path: '.env.local'
 });
 
-jest.mock('./src/env/index.ts',()=>({
-    getEnvironments:()=>({...process.env})
+/**
+ * @type {import('jest').Mock}
+ * 
+ * Mock para obtener variable de entorno de .env.local para probar
+ */
+jest.mock('./src/env/index', () => ({
+    getEnvironments: () => ({ ...process.env })
 }))
