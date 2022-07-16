@@ -2,19 +2,19 @@
 
 Personajes de la serie `the Rick and Morty`.
 
-App Demo aquí: [the Rick and Morty App](http://localhost:8080)
+App Demo aquí: [the Rick and Morty App](https://the-rick-and-morty-react.netlify.app/)
 
 ## Extra
 
-- Ejercicio #1, se encuentra en la siguiente ruta: `./src/utilities` ó [aquí]() .
-- Ejercicio #2, se encuentra en la siguiente ruta: `./src/components/ListNicknames.tsx` ó en la app menu de navegación derecho: [Nombres Ordenados]() .
+- Ejercicio #1, se encuentra en la siguiente ruta: `./src/utilities` ó [aquí](https://github.com/chaicopadillag/rickandmorty-ap/blob/main/src/utilities/index.ts) .
+- Ejercicio #2, se encuentra en la siguiente ruta: `./src/components/ListNicknames.tsx` ó en la app menu de navegación derecho: [Nombres Ordenados](https://github.com/chaicopadillag/rickandmorty-ap/blob/main/src/components/ListNicknames.tsx) .
 
 ## Clonar y Probar
 
 - Clonar el repositorio:
 
 ```
-git clone url
+git clone git@github.com:chaicopadillag/rickandmorty-ap.git
 ```
 
 - Instalar dependencias:
