@@ -1,8 +1,10 @@
 # The Rick and Morty App
 
-Personajes de la serie `the Rick and Morty`.
+Este proyecto es una aplicación web que permite ver los personajes de la serie `the Rick and Morty` en una lista y el detalle de cada uno.
 
-App Demo aquí: [the Rick and Morty App](https://the-rick-and-morty-react.netlify.app/)
+Es la [Solución de este ejercicio](https://github.com/eclass/prueba-tecnica/blob/main/FrontReact.md) para ello se usa la API de [Rick and Morty](https://rickandmortyapi.com/graphql/).
+
+🚀 [`App Demo aquí`](https://the-rick-and-morty-react.netlify.app/)
 
 ![Demo](https://raw.githubusercontent.com/chaicopadillag/rick-and-morty-app/main/screenshot.png)
 
